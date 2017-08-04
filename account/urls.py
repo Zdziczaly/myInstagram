@@ -8,6 +8,7 @@ from . import views
 urlpatterns = [
     # url(r'^login/$', views.user_login, name='login'),
     url(r'^register/$', views.register, name='register'),
+    url(r'^edit/$', views.edit, name='edit'),
     url(r'^login/$', LoginView.as_view(), name='login'),
     url(r'^logout/$', LogoutView.as_view(), name='logout'),
     url(r'^logout-then-login', logout_then_login, name='logout-then-login'),
@@ -23,7 +24,8 @@ urlpatterns = [
     # Potwierdzenie wysłania maila z linkiem
     url(r'^password-reset/done/$', PasswordResetDoneView.as_view(), name='password_reset_done'),
     # Zdefiniowanie nowego hasła
-    url(r'^password-reset/confirm/(?P<uidb64>[-\w]+)/(?P<token>[-\w]+)/$', PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
+    url(r'^password-reset/confirm/(?P<uidb64>[-\w]+)/(?P<token>[-\w]+)/$', PasswordResetConfirmView.as_view(),
+        name='password_reset_confirm'),
     # Informacja o poprawnym ustaleniu nowego hasła
     url(r'^password-reset/complete/$', PasswordResetCompleteView.as_view(), name='password_reset_complete'),
 ]
