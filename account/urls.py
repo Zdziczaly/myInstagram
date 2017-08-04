@@ -16,11 +16,11 @@ urlpatterns = [
     url(r'^password-change/done/$', PasswordChangeDoneView.as_view(), name='password_change_done'),
     # Widoki resetu hasła
     # Umożliwienie wysłania linku do zmiany hasła
-    url(r'^password-reset/$', PasswordResetView.as_view(), name='password-reset'),
+    url(r'^password-reset/$', PasswordResetView.as_view(), name='password_reset'),
     # Potwierdzenie wysłania maila z linkiem
-    url(r'^password-reset/done/$', PasswordResetDoneView.as_view(), name='password-reset-done'),
+    url(r'^password-reset/done/$', PasswordResetDoneView.as_view(), name='password_reset_done'),
     # Zdefiniowanie nowego hasła
-    url(r'^password-reset/confirm/$', PasswordResetConfirmViewView.as_view(), name='password-reset-confirm'),
+    url(r'^password-reset/confirm/(?P<uidb64>[-\w]+)/(?P<token>[-\w]+)/$', PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
     # Informacja o poprawnym ustaleniu nowego hasła
-    url(r'^password-reset/complete/$', PasswordResetCompleteViewView.as_view(), name='password-reset-complete'),
+    url(r'^password-reset/complete/$', PasswordResetCompleteView.as_view(), name='password_reset_complete'),
 ]
