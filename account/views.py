@@ -6,6 +6,11 @@ from django.contrib.auth.decorators import login_required
 
 
 def user_login(request):
+    '''
+    NIEUŻYWANY - Widok logowania. Zastąpiony przez django.contrib.auth.views.LoginView
+    :param request: żądanie HTTP
+    :return: render strony
+    '''
     if request.method == "POST":
         form = LoginForm(request.POST)
         if form.is_valid():
