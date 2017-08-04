@@ -7,13 +7,16 @@ from . import views
 
 urlpatterns = [
     # url(r'^login/$', views.user_login, name='login'),
+    url(r'^register/$', views.register, name='register'),
     url(r'^login/$', LoginView.as_view(), name='login'),
     url(r'^logout/$', LogoutView.as_view(), name='logout'),
     url(r'^logout-then-login', logout_then_login, name='logout-then-login'),
     url(r'^$', views.dashboard, name='dashboard'),
+
     # Widoki zmiany hasła
     url(r'^password-change/$', PasswordChangeView.as_view(), name='password_change'),
     url(r'^password-change/done/$', PasswordChangeDoneView.as_view(), name='password_change_done'),
+
     # Widoki resetu hasła
     # Umożliwienie wysłania linku do zmiany hasła
     url(r'^password-reset/$', PasswordResetView.as_view(), name='password_reset'),
