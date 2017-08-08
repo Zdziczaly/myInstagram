@@ -28,4 +28,8 @@ urlpatterns = [
         name='password_reset_confirm'),
     # Informacja o poprawnym ustaleniu nowego hasła
     url(r'^password-reset/complete/$', PasswordResetCompleteView.as_view(), name='password_reset_complete'),
+
+    # Widoki użytkowników
+    url(r'^users/$', views.user_list, name='user_list'),
+    url(r'^users/(?P<username>[-\w]+)/$', views.user_detail, name='user_detail'),
 ]
