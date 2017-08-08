@@ -25,13 +25,14 @@ SECRET_KEY = '#e_9%rkhumqrvd9zh#qo8^^@*0jf-8%f-f@8s-_)a5ujhz_$1m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['myinstagram.pl']
 
 # Application definition
 
 INSTALLED_APPS = [
     'account.apps.AccountConfig',
     'images.apps.ImagesConfig',
+    'sorl.thumbnail',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
