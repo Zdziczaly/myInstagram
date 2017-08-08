@@ -10,7 +10,7 @@ def create_action(user, verb, target=None) -> bool:
 
     :param user: użytkownik
     :param verb: opis akcji
-    :param target: obiekt, do którego odnosi się akcja (target_ct: ContentType, target_id: int)
+    :param target: obiekt, do którego odnosi się akcja
     :return: wartość boolowska stwierdzająca czy akcja się powiodła
     """
     now = timezone.now()
